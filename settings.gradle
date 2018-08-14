@@ -1,0 +1,5 @@
+rootProject.name = 'starsheet'
+
+include 'starsheet-backend'
+include 'starsheet-frontend'
+
