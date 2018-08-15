@@ -9,6 +9,7 @@ import {SplashComponent} from './splash/splash.component';
 import {appRoutes} from "./app.routes";
 import {FormsModule} from "@angular/forms";
 import { SheetCreationComponent } from './sheet/sheet-creation/sheet-creation.component';
+import { SheetOverviewComponent } from './sheet/sheet-overview/sheet-overview.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SheetCreationComponent } from './sheet/sheet-creation/sheet-creation.co
     MemberAuthenticationComponent,
     UserRegistrationComponent,
     SplashComponent,
-    SheetCreationComponent
+    SheetCreationComponent,
+    SheetOverviewComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
