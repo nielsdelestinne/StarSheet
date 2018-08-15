@@ -1,20 +1,48 @@
 <div class="card text-white bg-dark">
-  <div class="card-header">
-    <h3 class="card-title">Log in to StarSheet</h3>
-  </div>
-  <div class="card-body">
-    <form>
+  <form (ngSubmit)="onSubmit()" #memberAuthenticationForm="ngForm" novalidate>
+    <div class="card-header">
+      <h3 class="card-title">Log in to StarSheet</h3>
+    </div>
+    <div class="card-body">
       <div class="form-group">
         <label for="inputEmail">Email address</label>
-        <input type="email" class="form-control form-control-lg" id="inputEmail" placeholder="Your email">
+        <input type="email"
+               class="form-control form-control-lg"
+               id="inputEmail"
+               placeholder="Your email"
+               name="email"
+               [(ngModel)]="memberCredentials.email"
+               #emailModel="ngModel"
+               [ngClass]="{'is-invalid': emailModel.invalid && (emailModel.dirty || emailModel.touched), 'is-valid': emailModel.valid}"
+               required
+               minlength="5">
+        <div class="invalid-feedback">
+          Please choose a valid e-mail
+        </div>
       </div>
       <div class="form-group">
         <label for="inputPassword">Password</label>
-        <input type="password" class="form-control form-control-lg" id="inputPassword" placeholder="Your Password">
+        <input type="password"
+               class="form-control form-control-lg"
+               id="inputPassword"
+               placeholder="Your Password"
+               name="password"
+               [(ngModel)]="memberCredentials.password"
+               #passwordModel="ngModel"
+               [ngClass]="{'is-invalid': passwordModel.invalid && (passwordModel.dirty || passwordModel.touched), 'is-valid': passwordModel.valid}"
+               required
+               minlength="7">
+        <div class="invalid-feedback">
+          Please choose a password with a minimum length of 7
+        </div>
       </div>
-    </form>
-  </div>
-  <div class="card-footer text-right">
-    <a href="#" class="btn btn-warning btn-lg btn-block">Log in</a>
-  </div>
+    </div>
+    <div class="card-footer text-right">
+      <button type="submit" class="btn btn-warning btn-lg btn-block"
+              [disabled]="!memberAuthenticationForm.form.valid || isSubmitted">
+        <span *ngIf="!isSubmitted">Log in</span>
+        <span *ngIf="isSubmitted">Processing...</span>
+      </button>
+    </div>
+  </form>
 </div>

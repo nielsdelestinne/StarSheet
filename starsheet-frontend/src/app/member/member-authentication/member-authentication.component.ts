@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MemberAuthenticationService} from "../../core/services/member-authentication.service";
+import {MemberCredentials} from "../../core/domain/member/member-credentials";
 
 @Component({
   selector: 'app-member-authentication',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemberAuthenticationComponent implements OnInit {
 
-  constructor() { }
+  protected memberCredentials: MemberCredentials;
+  protected isSubmitted: boolean;
+
+  constructor(private memberAuthenticationService: MemberAuthenticationService) { }
 
   ngOnInit() {
+      this.isSubmitted = false;
+      this.memberCredentials = {email: "", password: ""};
+  }
+
+  onSubmit() {
+    this.isSubmitted = true;
+    this.memberAuthenticationService
+      .authenticate(this.memberCredentials)
+      .subscribe(memberInfo => {
+        // route to new page
+      })
   }
 
 }
