@@ -8,13 +8,15 @@ import {UserRegistrationComponent} from './user/user-registration/user-registrat
 import {SplashComponent} from './splash/splash.component';
 import {appRoutes} from "./app.routes";
 import {FormsModule} from "@angular/forms";
+import { SheetCreationComponent } from './sheet/sheet-creation/sheet-creation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MemberAuthenticationComponent,
     UserRegistrationComponent,
-    SplashComponent
+    SplashComponent,
+    SheetCreationComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
