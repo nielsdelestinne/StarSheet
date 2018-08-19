@@ -3,7 +3,6 @@ import {UserRegistrationComponent} from "./user/user-registration/user-registrat
 import {MemberAuthenticationComponent} from "./member/member-authentication/member-authentication.component";
 import {SplashComponent} from "./splash/splash.component";
 import {SheetOverviewComponent} from "./sheet/sheet-overview/sheet-overview.component";
-import {SheetCreationComponent} from "./sheet/sheet-creation/sheet-creation.component";
 import {MemberAuthenticationGuard} from "./core/guards/member-authentication.guard";
 
 export const appRoutes: Routes = [
@@ -12,7 +11,6 @@ export const appRoutes: Routes = [
   {path: 'splash', component: SplashComponent},
   {path: '', redirectTo: 'splash', pathMatch: 'full'},
   {path: 'sheet', canActivate: [MemberAuthenticationGuard], children : [
-    {path: 'overview', component: SheetOverviewComponent},
-    {path: 'create', component: SheetCreationComponent},
+    {path: 'overview/:memberId', component: SheetOverviewComponent},
   ]}
 ];
