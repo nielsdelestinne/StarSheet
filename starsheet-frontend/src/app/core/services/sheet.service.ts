@@ -12,7 +12,7 @@ export class SheetService {
   constructor() {
   }
 
-  getSheetsForMemberId(memberId: MemberId): Observable<SheetOverviewInformation[]> {
+  getAllSheetsForMemberId(memberId: MemberId): Observable<SheetOverviewInformation[]> {
     return of([
       new SheetOverviewInformation(new SheetId("99f8626a-84c8-419d-ad4d-fadb740464c1"), "Chip (Leuven)", "Playing with the starfinder guys from Leuven", memberId),
       new SheetOverviewInformation(new SheetId("778e7ccb-9ccd-4f39-b4d5-61178134d0f5"), "Torux", "Charactersheet for some other group", memberId),
