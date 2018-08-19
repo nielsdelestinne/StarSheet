@@ -10,6 +10,9 @@ import {appRoutes} from "./app.routes";
 import {FormsModule} from "@angular/forms";
 import { SheetOverviewComponent } from './sheet/sheet-overview/sheet-overview.component';
 import { SheetDetailComponent } from './sheet/sheet-detail/sheet-detail.component';
+import { SheetDetailCharacterInfoComponent } from './sheet/sheet-detail/sheet-detail-character-info/sheet-detail-character-info.component';
+import { SheetDetailAbilityScoresComponent } from './sheet/sheet-detail/sheet-detail-ability-scores/sheet-detail-ability-scores.component';
+import { AbilityScoreLineComponent } from './sheet/sheet-detail/sheet-detail-ability-scores/ability-score-line/ability-score-line.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { SheetDetailComponent } from './sheet/sheet-detail/sheet-detail.componen
     UserRegistrationComponent,
     SplashComponent,
     SheetOverviewComponent,
-    SheetDetailComponent
+    SheetDetailComponent,
+    SheetDetailCharacterInfoComponent,
+    SheetDetailAbilityScoresComponent,
+    AbilityScoreLineComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
