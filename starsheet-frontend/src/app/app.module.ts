@@ -8,8 +8,8 @@ import {UserRegistrationComponent} from './user/user-registration/user-registrat
 import {SplashComponent} from './splash/splash.component';
 import {appRoutes} from "./app.routes";
 import {FormsModule} from "@angular/forms";
-import { SheetCreationComponent } from './sheet/sheet-creation/sheet-creation.component';
 import { SheetOverviewComponent } from './sheet/sheet-overview/sheet-overview.component';
+import { SheetDetailComponent } from './sheet/sheet-detail/sheet-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +17,8 @@ import { SheetOverviewComponent } from './sheet/sheet-overview/sheet-overview.co
     MemberAuthenticationComponent,
     UserRegistrationComponent,
     SplashComponent,
-    SheetCreationComponent,
-    SheetOverviewComponent
+    SheetOverviewComponent,
+    SheetDetailComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
