@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {SheetId} from "../../core/domain/sheet/sheet-id";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-sheet-detail',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SheetDetailComponent implements OnInit {
 
-  constructor() { }
+  public sheetId: SheetId;
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.sheetId = new SheetId(params['sheetId']);
+    });
+
   }
 
 }

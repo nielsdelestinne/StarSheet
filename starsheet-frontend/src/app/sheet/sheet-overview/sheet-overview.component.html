@@ -4,13 +4,13 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-12 mr-auto" *ngFor="let sheet of sheets">
+          <div class="col-lg-4 col-md-6 col-sm-12 mr-auto" *ngFor="let sheet of sheets; let sheetIndex = index">
             <div class="card text-white bg-dark">
-              <div class="sheet-overview-bar sheet-overview-bar-color-{{getRandomIndexForColorBar()}}"></div>
+              <div class="sheet-overview-bar sheet-overview-bar-color-{{sheetIndex % 5 + 1}}"></div>
               <div class="card-body">
                 <h5 class="card-title">{{sheet.name}}</h5>
                 <p class="card-text">{{sheet.description}}</p>
-                <a href="#" class="btn btn-warning">Open <span class="fas fa-pen"></span></a>
+                <button class="btn btn-warning" (click)="navigateToDetail(sheet.id)">Open <span class="fas fa-pen"></span></button>
               </div>
             </div>
           </div>
