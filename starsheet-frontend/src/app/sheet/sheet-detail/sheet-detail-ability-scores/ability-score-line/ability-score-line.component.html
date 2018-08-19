@@ -1,0 +1,17 @@
+<th scope="row">{{abilityType}}</th>
+<td><input type="number"
+           class="form-control form-control-sm"
+           name="{{abilityType | lowercase}}Score"
+           [(ngModel)]="score"
+           (change)="recalculateModifier()"
+           required></td>
+<td>{{modifier}}</td>
+<td><input type="number"
+           class="form-control form-control-sm"
+           name="{{abilityType | lowercase}}UpgradedScore"
+           [(ngModel)]="upgradedScore"
+           (change)="recalculateUpgradedModifier()"
+           required></td>
+<td>{{upgradedModifier}}</td>
+
+

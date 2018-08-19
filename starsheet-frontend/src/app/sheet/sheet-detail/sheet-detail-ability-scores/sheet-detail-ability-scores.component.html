@@ -1,0 +1,37 @@
+<div class="card text-white bg-dark">
+  <div class="card-header">
+    <h3 class="card-title">Ability scores</h3>
+  </div>
+  <div class="card-body">
+
+    <table class="table table-dark">
+      <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Score</th>
+        <th scope="col">Modifier</th>
+        <th scope="col">Score (+)</th>
+        <th scope="col">Modifier (+)</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr app-ability-score-line [abilityType]="'STR'" [score]="abilityScores.strength.score"
+            [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
+        <tr app-ability-score-line [abilityType]="'DEX'" [score]="abilityScores.strength.score"
+            [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
+        <tr app-ability-score-line [abilityType]="'CON'" [score]="abilityScores.strength.score"
+            [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
+        <tr app-ability-score-line [abilityType]="'INT'" [score]="abilityScores.strength.score"
+            [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
+        <tr app-ability-score-line [abilityType]="'WIS'" [score]="abilityScores.strength.score"
+            [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
+        <tr app-ability-score-line [abilityType]="'CHA'" [score]="abilityScores.strength.score"
+            [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="card-footer text-right">
+    <a href="#" class="btn btn-warning btn-lg btn-block">Save</a>
+  </div>
+</div>
