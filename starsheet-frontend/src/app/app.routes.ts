@@ -11,6 +11,6 @@ export const appRoutes: Routes = [
   {path: 'splash', component: SplashComponent},
   {path: '', redirectTo: 'splash', pathMatch: 'full'},
   {path: 'sheet', canActivate: [MemberAuthenticationGuard], children : [
-    {path: 'overview/:memberId', component: SheetOverviewComponent},
+    {path: 'overview', component: SheetOverviewComponent},
   ]}
 ];

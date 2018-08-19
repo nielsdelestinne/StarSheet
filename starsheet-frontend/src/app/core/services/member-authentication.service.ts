@@ -12,7 +12,15 @@ export class MemberAuthenticationService {
   constructor() { }
 
   authenticate(memberCredentials : MemberCredentials): Observable<MemberInfo>{
-    return of(new MemberInfo(new MemberId(), memberCredentials.email, 'JustTestUser007'))
+    return of(this.dummyMemberInfo());
+  }
+
+  getAuthenticatedMemberInfo(): MemberInfo {
+    return this.dummyMemberInfo();
+  }
+
+  private dummyMemberInfo() : MemberInfo {
+    return new MemberInfo(new MemberId(), "some@email.com", 'JustTestUser007')
   }
 
 }
