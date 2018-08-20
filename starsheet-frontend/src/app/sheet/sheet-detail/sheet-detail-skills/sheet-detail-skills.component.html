@@ -16,30 +16,33 @@
       </tr>
       </thead>
       <tbody>
-      <th scope="row">Acrobatics</th>
-      <td>TOTAL*</td>
-      <td><input type="number"
-                 class="form-control form-control-sm"
-                 name="acrobaticsRanks"
-                 required></td>
-      <td><input type="number"
-                 class="form-control form-control-sm"
-                 name="acrobaticsClassBonus"
-                 required></td>
-      <td><input type="number"
-                 class="form-control form-control-sm"
-                 name="acrobaticsAbilityMod"
-                 required></td>
-      <td><input type="number"
-                 class="form-control form-control-sm"
-                 name="acrobaticsMiscMod"
-                 required></td>
+        <tr app-skill-line [skillType]="'Acrobatics'" [(skillsForType)]="skills.acrobatics"></tr>
+        <tr app-skill-line [skillType]="'Athletics'" [(skillsForType)]="skills.athletics"></tr>
+        <tr app-skill-line [skillType]="'Bluff'" [(skillsForType)]="skills.bluff"></tr>
+        <tr app-skill-line [skillType]="'Computers'" [(skillsForType)]="skills.computers"></tr>
+        <tr app-skill-line [skillType]="'Culture'" [(skillsForType)]="skills.culture"></tr>
+        <tr app-skill-line [skillType]="'Diplomacy'" [(skillsForType)]="skills.diplomacy"></tr>
+        <tr app-skill-line [skillType]="'Disguise'" [(skillsForType)]="skills.disguise"></tr>
+        <tr app-skill-line [skillType]="'Engineering'" [(skillsForType)]="skills.engineering"></tr>
+        <tr app-skill-line [skillType]="'Intimidate'" [(skillsForType)]="skills.intimidate"></tr>
+        <tr app-skill-line [skillType]="'Life Science'" [(skillsForType)]="skills.lifeScience"></tr>
+        <tr app-skill-line [skillType]="'Medicine'" [(skillsForType)]="skills.medicine"></tr>
+        <tr app-skill-line [skillType]="'Mysticism'" [(skillsForType)]="skills.mysticism"></tr>
+        <tr app-skill-line [skillType]="'Perception'" [(skillsForType)]="skills.perception"></tr>
+        <tr app-skill-line [skillType]="'physical Science'" [(skillsForType)]="skills.physicalScience"></tr>
+        <tr app-skill-line [skillType]="'Piloting'" [(skillsForType)]="skills.piloting"></tr>
+        <tr app-skill-line [skillType]="'Profession'" [(skillsForType)]="skills.profession"></tr>
+        <tr app-skill-line [skillType]="'Sense Motive'" [(skillsForType)]="skills.senseMotive"></tr>
+        <tr app-skill-line [skillType]="'Sleight Of Hand'" [(skillsForType)]="skills.sleightOfHand"></tr>
+        <tr app-skill-line [skillType]="'Stealth'" [(skillsForType)]="skills.stealth"></tr>
+        <tr app-skill-line [skillType]="'Survival'" [(skillsForType)]="skills.survival"></tr>
+
       </tbody>
     </table>
 
   </div>
   <div class="card-footer text-right">
-    <button type="button" class="btn btn-warning btn-block" >
+    <button type="button" class="btn btn-warning btn-block">
       Save
     </button>
   </div>

@@ -1,3 +1,21 @@
-<p>
-  skill-line works!
-</p>
+<th scope="row">{{skillType}}</th>
+<td>{{skillsForType.total}}</td>
+<td><input type="number"
+           class="form-control form-control-sm"
+           name="{{skillType | lowercase}}Ranks"
+           [(ngModel)]="skillsForType.ranks"
+           (change)="onRanksChange()"
+           required></td>
+<td><input type="number"
+           class="form-control form-control-sm"
+           name="{{skillType | lowercase}}ClassBonus"
+           [(ngModel)]="skillsForType.classBonus"
+           (change)="onClassBonusChange()"
+           required></td>
+<td>{{skillsForType.abilityMod}}</td>
+<td><input type="number"
+           class="form-control form-control-sm"
+           name="{{skillType | lowercase}}MiscMod"
+           [(ngModel)]="skillsForType.miscMod"
+           (change)="onMiscModChange()"
+           required></td>
