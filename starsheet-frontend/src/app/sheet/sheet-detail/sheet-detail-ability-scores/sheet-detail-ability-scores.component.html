@@ -26,6 +26,31 @@
 
   </div>
   <div class="card-footer text-right">
-    <a (click)="logInfo()" class="btn btn-warning btn-lg btn-block">Save</a>
+    <button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#debugModal">
+      Save (now debug output)
+    </button>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="debugModal" tabindex="-1" role="dialog" aria-labelledby="debugModelLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="debugModelLabel">Debug info</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {{debugInfo()}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>

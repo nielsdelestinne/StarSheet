@@ -28,8 +28,8 @@ export class SheetDetailAbilityScoresComponent implements OnInit {
     };
   }
 
-  logInfo(): void {
-    console.log(this.abilityScores);
+  debugInfo(): string {
+    return JSON.stringify(this.abilityScores);
   }
 
 }
