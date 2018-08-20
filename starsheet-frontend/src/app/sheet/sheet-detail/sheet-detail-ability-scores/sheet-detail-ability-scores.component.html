@@ -15,18 +15,12 @@
       </tr>
       </thead>
       <tbody>
-        <tr app-ability-score-line [abilityType]="'STR'" [(score)]="abilityScores.strength.score"
-            [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
-        <tr app-ability-score-line [abilityType]="'DEX'" [(score)]="abilityScores.dexterity.score"
-            [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
-        <tr app-ability-score-line [abilityType]="'CON'" [(score)]="abilityScores.constitution.score"
-            [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
-        <tr app-ability-score-line [abilityType]="'INT'" [(score)]="abilityScores.intelligence.score"
-            [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
-        <tr app-ability-score-line [abilityType]="'WIS'" [(score)]="abilityScores.wisdom.score"
-            [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
-        <tr app-ability-score-line [abilityType]="'CHA'" [(score)]="abilityScores.charisma.score"
-            [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
+        <tr app-ability-score-line [abilityType]="'STR'" [(abilityScoresForType)]="abilityScores.strength"></tr>
+        <tr app-ability-score-line [abilityType]="'DEX'" [(abilityScoresForType)]="abilityScores.dexterity"></tr>
+        <tr app-ability-score-line [abilityType]="'CON'" [(abilityScoresForType)]="abilityScores.constitution"></tr>
+        <tr app-ability-score-line [abilityType]="'INT'" [(abilityScoresForType)]="abilityScores.intelligence"></tr>
+        <tr app-ability-score-line [abilityType]="'WIS'" [(abilityScoresForType)]="abilityScores.wisdom"></tr>
+        <tr app-ability-score-line [abilityType]="'CHA'" [(abilityScoresForType)]="abilityScores.charisma"></tr>
       </tbody>
     </table>
 

@@ -2,16 +2,16 @@
 <td><input type="number"
            class="form-control form-control-sm"
            name="{{abilityType | lowercase}}Score"
-           [(ngModel)]="score"
+           [(ngModel)]="abilityScoresForType.score"
            (change)="onScoreChange()"
            required></td>
-<td>{{modifier}}</td>
+<td>{{abilityScoresForType.modifier}}</td>
 <td><input type="number"
            class="form-control form-control-sm"
            name="{{abilityType | lowercase}}UpgradedScore"
-           [(ngModel)]="upgradedScore"
+           [(ngModel)]="abilityScoresForType.upgradedScore"
            (change)="onUpgradedScoreChange()"
            required></td>
-<td>{{upgradedModifier}}</td>
+<td>{{abilityScoresForType.upgradedModifier}}</td>
 
 

@@ -8,24 +8,18 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class AbilityScoreLineComponent implements OnInit {
 
   @Input() abilityType: string;
-  @Input() score: number;
-  @Output() scoreChange = new EventEmitter<number>();
-  @Input() upgradedScore: number;
-
-  modifier: number;
-  upgradedModifier: number;
+  @Input() abilityScoresForType: any;
+  @Output() abilityScoresForTypeChange = new EventEmitter<any>();
 
   constructor() {
   }
 
   ngOnInit() {
-    this.modifier = 0;
-    this.upgradedModifier = 0;
   }
 
   onScoreChange() : void {
     this.recalculateModifier();
-    this.scoreChange.emit(this.score);
+    this.abilityScoresForTypeChange.emit(this.abilityScoresForType);
   }
 
   onUpgradedScoreChange() : void {
@@ -33,11 +27,11 @@ export class AbilityScoreLineComponent implements OnInit {
   }
 
   private recalculateModifier() {
-    this.modifier = Math.floor((this.score - 10) / 2);
+    this.abilityScoresForType.modifier = Math.floor((this.abilityScoresForType.score - 10) / 2);
   }
 
   private recalculateUpgradedModifier() {
-    this.upgradedModifier = Math.floor((this.upgradedScore - 10) / 2);
+    this.abilityScoresForType.upgradedModifier = Math.floor((this.abilityScoresForType.upgradedScore - 10) / 2);
   }
 
 }
