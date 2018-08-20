@@ -13,6 +13,7 @@ import { SheetDetailComponent } from './sheet/sheet-detail/sheet-detail.componen
 import { SheetDetailCharacterInfoComponent } from './sheet/sheet-detail/sheet-detail-character-info/sheet-detail-character-info.component';
 import { SheetDetailAbilityScoresComponent } from './sheet/sheet-detail/sheet-detail-ability-scores/sheet-detail-ability-scores.component';
 import { AbilityScoreLineComponent } from './sheet/sheet-detail/sheet-detail-ability-scores/ability-score-line/ability-score-line.component';
+import { SheetDetailSkillsComponent } from './sheet/sheet-detail/sheet-detail-skills/sheet-detail-skills.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AbilityScoreLineComponent } from './sheet/sheet-detail/sheet-detail-abi
     SheetDetailComponent,
     SheetDetailCharacterInfoComponent,
     SheetDetailAbilityScoresComponent,
-    AbilityScoreLineComponent
+    AbilityScoreLineComponent,
+    SheetDetailSkillsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
