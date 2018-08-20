@@ -9,6 +9,7 @@ export class AbilityScoreLineComponent implements OnInit {
 
   @Input() abilityType: string;
   @Input() score: number;
+  @Output() scoreChange = new EventEmitter<number>();
   @Input() upgradedScore: number;
 
   modifier: number;
@@ -22,11 +23,20 @@ export class AbilityScoreLineComponent implements OnInit {
     this.upgradedModifier = 0;
   }
 
-  recalculateModifier() {
+  onScoreChange() : void {
+    this.recalculateModifier();
+    this.scoreChange.emit(this.score);
+  }
+
+  onUpgradedScoreChange() : void {
+    this.recalculateUpgradedModifier();
+  }
+
+  private recalculateModifier() {
     this.modifier = Math.floor((this.score - 10) / 2);
   }
 
-  recalculateUpgradedModifier() {
+  private recalculateUpgradedModifier() {
     this.upgradedModifier = Math.floor((this.upgradedScore - 10) / 2);
   }
 

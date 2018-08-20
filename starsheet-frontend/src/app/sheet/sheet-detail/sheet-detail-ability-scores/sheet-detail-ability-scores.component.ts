@@ -13,16 +13,28 @@ export class SheetDetailAbilityScoresComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.abilityScores = {strength: {}};
+    this.initializeAblityScores();
+  }
+
+  private initializeAblityScores() {
+    this.abilityScores = {
+      strength: {},
+      dexterity: {},
+      constitution: {},
+      intelligence: {},
+      wisdom: {},
+      charisma: {},
+    };
     this.abilityScores.strength = {score: 0, modifier: 0, upgradedScore: 0, upgradedModifier: 0};
+    this.abilityScores.dexterity = {score: 0, modifier: 0, upgradedScore: 0, upgradedModifier: 0};
+    this.abilityScores.constitution = {score: 0, modifier: 0, upgradedScore: 0, upgradedModifier: 0};
+    this.abilityScores.intelligence = {score: 0, modifier: 0, upgradedScore: 0, upgradedModifier: 0};
+    this.abilityScores.wisdom = {score: 0, modifier: 0, upgradedScore: 0, upgradedModifier: 0};
+    this.abilityScores.charisma = {score: 0, modifier: 0, upgradedScore: 0, upgradedModifier: 0};
   }
 
-  recalculateModifier() {
-    this.abilityScores.strength.modifier =  Math.floor((this.abilityScores.strength.score - 10) / 2);
-  }
-
-  recalculateUpgradedModifier() {
-    this.abilityScores.strength.upgradedModifier =  Math.floor((this.abilityScores.strength.upgradedScore - 10) / 2);
+  logInfo() : void {
+    console.log(this.abilityScores);
   }
 
 }

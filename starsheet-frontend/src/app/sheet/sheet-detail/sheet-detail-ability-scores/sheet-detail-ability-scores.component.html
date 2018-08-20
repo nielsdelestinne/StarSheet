@@ -15,23 +15,23 @@
       </tr>
       </thead>
       <tbody>
-        <tr app-ability-score-line [abilityType]="'STR'" [score]="abilityScores.strength.score"
+        <tr app-ability-score-line [abilityType]="'STR'" [(score)]="abilityScores.strength.score"
             [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
-        <tr app-ability-score-line [abilityType]="'DEX'" [score]="abilityScores.strength.score"
+        <tr app-ability-score-line [abilityType]="'DEX'" [(score)]="abilityScores.dexterity.score"
             [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
-        <tr app-ability-score-line [abilityType]="'CON'" [score]="abilityScores.strength.score"
+        <tr app-ability-score-line [abilityType]="'CON'" [(score)]="abilityScores.constitution.score"
             [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
-        <tr app-ability-score-line [abilityType]="'INT'" [score]="abilityScores.strength.score"
+        <tr app-ability-score-line [abilityType]="'INT'" [(score)]="abilityScores.intelligence.score"
             [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
-        <tr app-ability-score-line [abilityType]="'WIS'" [score]="abilityScores.strength.score"
+        <tr app-ability-score-line [abilityType]="'WIS'" [(score)]="abilityScores.wisdom.score"
             [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
-        <tr app-ability-score-line [abilityType]="'CHA'" [score]="abilityScores.strength.score"
+        <tr app-ability-score-line [abilityType]="'CHA'" [(score)]="abilityScores.charisma.score"
             [upgradedScore]="abilityScores.strength.upgradedScore"></tr>
       </tbody>
     </table>
 
   </div>
   <div class="card-footer text-right">
-    <a href="#" class="btn btn-warning btn-lg btn-block">Save</a>
+    <a (click)="logInfo()" class="btn btn-warning btn-lg btn-block">Save</a>
   </div>
 </div>

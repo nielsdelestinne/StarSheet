@@ -3,14 +3,14 @@
            class="form-control form-control-sm"
            name="{{abilityType | lowercase}}Score"
            [(ngModel)]="score"
-           (change)="recalculateModifier()"
+           (change)="onScoreChange()"
            required></td>
 <td>{{modifier}}</td>
 <td><input type="number"
            class="form-control form-control-sm"
            name="{{abilityType | lowercase}}UpgradedScore"
            [(ngModel)]="upgradedScore"
-           (change)="recalculateUpgradedModifier()"
+           (change)="onUpgradedScoreChange()"
            required></td>
 <td>{{upgradedModifier}}</td>
 
