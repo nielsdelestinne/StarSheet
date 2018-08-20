@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-sheet-detail-skills',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sheet-detail-skills.component.css']
 })
 export class SheetDetailSkillsComponent implements OnInit {
+
+  @Input() allAbilityScores : any;
 
   protected skills : any;
 
@@ -17,7 +19,7 @@ export class SheetDetailSkillsComponent implements OnInit {
 
   private initializeSkills() : void {
     this.skills = {
-      acrobatics: {total: 0, ranks: 0, classBonus: 0, abilityMod: 0, miscMod: 0},
+      acrobatics: {total: 0, ranks: 0, classBonus: 0, abilityMod: this.allAbilityScores.dexterity.modifier, miscMod: 0},
       athletics: {total: 0, ranks: 0, classBonus: 0, abilityMod: 0, miscMod: 0},
       bluff: {total: 0, ranks: 0, classBonus: 0, abilityMod: 0, miscMod: 0},
       computers: {total: 0, ranks: 0, classBonus: 0, abilityMod: 0, miscMod: 0},

@@ -1,5 +1,4 @@
-import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {AbilityScores} from "../../../core/domain/sheet/abilities/ability-scores";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-sheet-detail-ability-scores',
@@ -8,28 +7,20 @@ import {AbilityScores} from "../../../core/domain/sheet/abilities/ability-scores
 })
 export class SheetDetailAbilityScoresComponent implements OnInit {
 
-  protected abilityScores;
+  @Input() allAbilityScores: any;
+  @Output() allAbilityScoresChange = new EventEmitter<any>();
 
   constructor() {
   }
 
   ngOnInit() {
-    this.initializeAbilityScores();
-  }
-
-  private initializeAbilityScores() {
-    this.abilityScores = {
-      strength: new AbilityScores(0, 0, 0, 0),
-      dexterity: new AbilityScores(0, 0, 0, 0),
-      constitution: new AbilityScores(0, 0, 0, 0),
-      intelligence: new AbilityScores(0, 0, 0, 0),
-      wisdom: new AbilityScores(0, 0, 0, 0),
-      charisma: new AbilityScores(0, 0, 0, 0)
-    };
   }
 
   debugInfo(): string {
-    return JSON.stringify(this.abilityScores);
+    return JSON.stringify(this.allAbilityScores);
   }
 
+  emitUpdate() {
+    this.allAbilityScoresChange.emit(this.allAbilityScores);
+  }
 }

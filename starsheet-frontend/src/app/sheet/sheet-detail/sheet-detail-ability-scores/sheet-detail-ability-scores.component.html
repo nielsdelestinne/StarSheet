@@ -15,12 +15,12 @@
       </tr>
       </thead>
       <tbody>
-        <tr app-ability-score-line [abilityType]="'STR'" [(abilityScoresForType)]="abilityScores.strength"></tr>
-        <tr app-ability-score-line [abilityType]="'DEX'" [(abilityScoresForType)]="abilityScores.dexterity"></tr>
-        <tr app-ability-score-line [abilityType]="'CON'" [(abilityScoresForType)]="abilityScores.constitution"></tr>
-        <tr app-ability-score-line [abilityType]="'INT'" [(abilityScoresForType)]="abilityScores.intelligence"></tr>
-        <tr app-ability-score-line [abilityType]="'WIS'" [(abilityScoresForType)]="abilityScores.wisdom"></tr>
-        <tr app-ability-score-line [abilityType]="'CHA'" [(abilityScoresForType)]="abilityScores.charisma"></tr>
+        <tr app-ability-score-line [abilityType]="'STR'" [(abilityScoresForType)]="allAbilityScores.strength" (change)="emitUpdate()"></tr>
+        <tr app-ability-score-line [abilityType]="'DEX'" [(abilityScoresForType)]="allAbilityScores.dexterity" (change)="emitUpdate()"></tr>
+        <tr app-ability-score-line [abilityType]="'CON'" [(abilityScoresForType)]="allAbilityScores.constitution" (change)="emitUpdate()"></tr>
+        <tr app-ability-score-line [abilityType]="'INT'" [(abilityScoresForType)]="allAbilityScores.intelligence" (change)="emitUpdate()"></tr>
+        <tr app-ability-score-line [abilityType]="'WIS'" [(abilityScoresForType)]="allAbilityScores.wisdom" (change)="emitUpdate()"></tr>
+        <tr app-ability-score-line [abilityType]="'CHA'" [(abilityScoresForType)]="allAbilityScores.charisma" (change)="emitUpdate()"></tr>
       </tbody>
     </table>
 
