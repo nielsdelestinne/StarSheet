@@ -1,4 +1,5 @@
 import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {AbilityScores} from "../../../core/domain/sheet/abilities/ability-scores";
 
 @Component({
   selector: 'app-sheet-detail-ability-scores',
@@ -18,22 +19,16 @@ export class SheetDetailAbilityScoresComponent implements OnInit {
 
   private initializeAblityScores() {
     this.abilityScores = {
-      strength: {},
-      dexterity: {},
-      constitution: {},
-      intelligence: {},
-      wisdom: {},
-      charisma: {},
+      strength: new AbilityScores(0, 0, 0, 0),
+      dexterity: new AbilityScores(0, 0, 0, 0),
+      constitution: new AbilityScores(0, 0, 0, 0),
+      intelligence: new AbilityScores(0, 0, 0, 0),
+      wisdom: new AbilityScores(0, 0, 0, 0),
+      charisma: new AbilityScores(0, 0, 0, 0)
     };
-    this.abilityScores.strength = {score: 0, modifier: 0, upgradedScore: 0, upgradedModifier: 0};
-    this.abilityScores.dexterity = {score: 0, modifier: 0, upgradedScore: 0, upgradedModifier: 0};
-    this.abilityScores.constitution = {score: 0, modifier: 0, upgradedScore: 0, upgradedModifier: 0};
-    this.abilityScores.intelligence = {score: 0, modifier: 0, upgradedScore: 0, upgradedModifier: 0};
-    this.abilityScores.wisdom = {score: 0, modifier: 0, upgradedScore: 0, upgradedModifier: 0};
-    this.abilityScores.charisma = {score: 0, modifier: 0, upgradedScore: 0, upgradedModifier: 0};
   }
 
-  logInfo() : void {
+  logInfo(): void {
     console.log(this.abilityScores);
   }
 

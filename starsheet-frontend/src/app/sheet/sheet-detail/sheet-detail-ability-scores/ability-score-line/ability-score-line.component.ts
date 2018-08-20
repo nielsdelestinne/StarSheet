@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {AbilityScores} from "../../../../core/domain/sheet/abilities/ability-scores";
 
 @Component({
   selector: '[app-ability-score-line]',
@@ -8,8 +9,8 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class AbilityScoreLineComponent implements OnInit {
 
   @Input() abilityType: string;
-  @Input() abilityScoresForType: any;
-  @Output() abilityScoresForTypeChange = new EventEmitter<any>();
+  @Input() abilityScoresForType: AbilityScores;
+  @Output() abilityScoresForTypeChange = new EventEmitter<AbilityScores>();
 
   constructor() {
   }
