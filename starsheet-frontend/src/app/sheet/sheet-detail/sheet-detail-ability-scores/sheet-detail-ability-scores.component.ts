@@ -14,10 +14,10 @@ export class SheetDetailAbilityScoresComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.initializeAblityScores();
+    this.initializeAbilityScores();
   }
 
-  private initializeAblityScores() {
+  private initializeAbilityScores() {
     this.abilityScores = {
       strength: new AbilityScores(0, 0, 0, 0),
       dexterity: new AbilityScores(0, 0, 0, 0),
