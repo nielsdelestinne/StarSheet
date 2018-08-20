@@ -3,7 +3,7 @@
  A Starfinder character sheet creator and manager
  
  Inline-style: 
- ![StarSheet - Work in Progress](starsheet-wip.png "StarSheet - Work in Progress")
+ ![StarSheet - Work in Progress](starsheet_wip.png "StarSheet - Work in Progress")
 
  ## Usage
 
