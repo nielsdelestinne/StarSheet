@@ -14,6 +14,7 @@ import { SheetDetailCharacterInfoComponent } from './sheet/sheet-detail/sheet-de
 import { SheetDetailAbilityScoresComponent } from './sheet/sheet-detail/sheet-detail-ability-scores/sheet-detail-ability-scores.component';
 import { AbilityScoreLineComponent } from './sheet/sheet-detail/sheet-detail-ability-scores/ability-score-line/ability-score-line.component';
 import { SheetDetailSkillsComponent } from './sheet/sheet-detail/sheet-detail-skills/sheet-detail-skills.component';
+import { SkillLineComponent } from './sheet/sheet-detail/sheet-detail-skills/skill-line/skill-line.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SheetDetailSkillsComponent } from './sheet/sheet-detail/sheet-detail-sk
     SheetDetailCharacterInfoComponent,
     SheetDetailAbilityScoresComponent,
     AbilityScoreLineComponent,
-    SheetDetailSkillsComponent
+    SheetDetailSkillsComponent,
+    SkillLineComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
