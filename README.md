@@ -2,7 +2,9 @@
  
  A Starfinder character sheet creator and manager (work in progress)
  
- ![StarSheet - Work in Progress](starsheet_sheet_wip.png "StarSheet - Work in Progress")
+ ![StarSheet - Work in Progress 1](starsheet_login_wip.png "StarSheet - Work in Progress (login)")
+ ![StarSheet - Work in Progress 2](starsheet_overview_wip.png "StarSheet - Work in Progress (overview)")
+ ![StarSheet - Work in Progress 3](starsheet_sheet_wip.png "StarSheet - Work in Progress (sheet)")
 
  ## Usage
 
