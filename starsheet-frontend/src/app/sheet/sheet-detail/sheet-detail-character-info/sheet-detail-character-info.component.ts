@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SheetDetailCharacterInfoComponent implements OnInit {
 
+  protected characterInfo : any;
+
   constructor() { }
 
   ngOnInit() {
+    this.characterInfo = {};
+  }
+
+  onSubmit() : void {
+
   }
 
 }
